@@ -24,11 +24,11 @@ import java.lang.NullPointerException;
 public class TestLogin extends Module4Final.Resource.Hooks  {
     @Test(priority = 1)
     public static void ValidCredentialsLogin() throws InterruptedException {
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         LoginPage.putUsernameInTheField("Mimi");
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         LoginPage.putPasswordInTheField("Mimi9010");
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         LoginPage.pressLoginButton();
 
 
