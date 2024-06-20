@@ -33,8 +33,8 @@ public class AccountCreate extends ReadConfig{
 
 
     // METOD
-    public static void addFirstName(String firstName1) {
-        driver.findElement(firstNameLocator).sendKeys(firstName1);
+    public static void addFirstName(String firstName) {
+        driver.findElement(firstNameLocator).sendKeys(firstName);
     }
 
     public static void addLastName(String lastName) {
