@@ -25,9 +25,9 @@ import org.json.JSONObject.*;
          //3. Submit the form
          //Expected Result:
          // A success message should be displayed indicating that the user account was created successfully.
-@Test(priority = 1)
-public class TestAccountCreate extends Module4Final.Resource.Hooks {
 
+public class TestAccountCreate extends Module4Final.Resource.Hooks {
+    @Test(priority = 1)
     public void accountCreation() throws IOException, ParseException {
 
         ReadConfig jsonConfig=new ReadConfig();
@@ -35,6 +35,7 @@ public class TestAccountCreate extends Module4Final.Resource.Hooks {
         String firstName=jsonConfig.firstName;
         System.out.println(firstName);
         String lastName=jsonConfig.lastName;
+        System.out.println(lastName);
         String address=jsonConfig.address;
         String city=jsonConfig.city;
         String state=jsonConfig.state;
@@ -44,23 +45,6 @@ public class TestAccountCreate extends Module4Final.Resource.Hooks {
         String user=jsonConfig.user;
         String pass=jsonConfig.pass;
         String repPass=jsonConfig.repPass;
-        //AccountCreate.addFirstName(firstName);
-        //AccountCreate.addLastName("lastName");
-        //AccountCreate.addAddress("address");
-        //AccountCreate.addCity("city");
-        //AccountCreate.addState("state");
-        //AccountCreate.addZipCode("code");
-        //AccountCreate.addPhone("mobPhone");
-        //AccountCreate.addSsn("ssn");
-        //AccountCreate.addUserName("user");
-        //AccountCreate.addPassword("pass");
-        //AccountCreate.repeatPassword("repPass");
-        //AccountCreate.pressLoginButton();
-        //AccountCreate.seeConfirmMessage();
-
-
-
-
     }
 
 }
