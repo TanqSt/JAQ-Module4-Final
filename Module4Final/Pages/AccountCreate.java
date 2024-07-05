@@ -8,7 +8,7 @@ import Module4Final.Resource.ReadConfig;
 
 
 
-public class AccountCreate extends ReadConfig{
+public class AccountCreate {
 
     public static WebDriver driver;
 
@@ -27,6 +27,7 @@ public class AccountCreate extends ReadConfig{
     static By repeatPass = By.id("repeatedPassword");
     static By submitBtn = By.xpath("/html/body/div[1]/div[3]/div[2]/form/table/tbody/tr[13]/td[2]/input");
     static By loginMessage=By.xpath("/html/body/div[1]/div[3]/div[2]/h1");
+    static By logOut=By.xpath("/html/body/div[1]/div[3]/div[1]/ul/li[8]/a");
     public AccountCreate(WebDriver driver) {
         this.driver = driver;
     }
@@ -79,6 +80,10 @@ public class AccountCreate extends ReadConfig{
     public static void pressLoginButton() {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         driver.findElement(submitBtn).click();
+    }
+    public static void pressLogoutButton() {
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        driver.findElement(logOut).click();
     }
     //public static Boolean visibleMessage(){
        // return driver.findElement(loginMessage).isDisplayed();

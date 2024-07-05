@@ -4,6 +4,8 @@ import Module4Final.Pages.TransferFunds;
 import Module4Final.Resource.Browsers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 import Module4Final.Pages.AccountCreate;
@@ -17,7 +19,8 @@ public class Hooks extends Browsers{
     LoginPage logPage;
     TransferFunds funds;
 
-    @BeforeTest
+
+    @BeforeMethod
     public void setup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -30,6 +33,7 @@ public class Hooks extends Browsers{
     }
 
     @AfterTest
+    @AfterMethod
     public void teardown() {
         driver.quit();
     }

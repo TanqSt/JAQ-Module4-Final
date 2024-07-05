@@ -1,4 +1,6 @@
-{"firstName": "Maria",
+{"credent":[
+  {
+  "firstName": "Maria",
   "lastName": "Ivanova",
   "address": "bul.Ivan Vazov",
   "city": "Varna",
@@ -6,9 +8,23 @@
   "code": "9010",
   "mobPhone": "0888888888",
   "ssn": "9010",
-  "user": "Mimi",
+  "user": "Mimi1286",
   "pass": "Mimi9010",
   "repPass": "Mimi9010"
+},
+  {
+"firstName": "Ivanka",
+"lastName": "Petrova",
+"address": "bul.Vasil Levski",
+"city": "Sofia",
+"state": "Sofia",
+"code": "1000",
+"mobPhone": "099999999",
+"ssn": "1000",
+"user": "Vani451",
+"pass": "Vani1000",
+"repPass": "Vani1000"
+}]}
 
 
-}
+

@@ -1,5 +1,7 @@
 package Module4Final.Tests;
 import Module4Final.Pages.AccountCreate;
+import Module4Final.Resource.DataSource;
+import org.json.JSONArray;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,6 +20,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import org.json.JSONObject.*;
 
+import org.testng.annotations.DataProvider;
+
 //Test Scenario: Validate successful user registration
 
         //1. Navigate to the registration page
@@ -27,12 +31,14 @@ import org.json.JSONObject.*;
          // A success message should be displayed indicating that the user account was created successfully.
 
 public class TestAccountCreate extends Module4Final.Resource.Hooks {
-    @Test(priority = 1)
+
+
+    @Test(dataProvider = "config.json",dataProviderClass = DataSource.class)
     public void accountCreation() throws IOException, ParseException {
 
         ReadConfig jsonConfig=new ReadConfig();
         ReadConfig.credentialsAndURLS();
-        String firstName=jsonConfig.firstName;
+        String firstName= jsonConfig.firstName;
         System.out.println(firstName);
         String lastName=jsonConfig.lastName;
         System.out.println(lastName);
